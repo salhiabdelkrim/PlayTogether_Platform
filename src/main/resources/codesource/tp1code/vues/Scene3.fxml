@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="myStage" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="844.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="codesource.tp1code.controllers.ProfilController">
+   <children>
+      <AnchorPane fx:id="header" prefHeight="80.0" prefWidth="650.0">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="88.0" layoutX="29.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pics/logoSansFond.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="205.0" layoutY="25.0" prefHeight="30.0" prefWidth="171.0" text="Bienvenu !" textFill="WHITE">
+               <font>
+                  <Font name="Cambria Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="718.0" layoutY="40.0" mnemonicParsing="false" onAction="#changerfenetre1" prefHeight="30.0" prefWidth="118.0" styleClass="deleteButton" text="Se déconnecter" />
+            <ComboBox fx:id="taille" layoutX="714.0" layoutY="8.0" prefHeight="25.0" prefWidth="127.0" promptText="Taille de police" />
+         </children>
+      </AnchorPane>
+      <MenuBar fx:id="menuApp">
+         <menus>
+            <Menu mnemonicParsing="false" text="Profil">
+               <items>
+                  <MenuItem fx:id="profil" mnemonicParsing="false" onAction="#changerfenetre2" text="Modifier votre profil" />
+                  <MenuItem fx:id="signInSignUp" mnemonicParsing="false" onAction="#changerfenetre1" text="Créer un nouveau compte" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Gestion des rencontres">
+               <items>
+                  <MenuItem fx:id="createMatch" mnemonicParsing="false" onAction="#changerfenetre3" text="créer une rencontre" />
+                  <MenuItem fx:id="joinMatch" mnemonicParsing="false" onAction="#changerfenetre4" text="rejoindre une rencontre" />
+                  <MenuItem fx:id="matchEditing" mnemonicParsing="false" onAction="#changerfenetre5" text="Supprimer ou modifier une rencontre " />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Nos activités">
+               <items>
+                  <MenuItem fx:id="aboutActivities" mnemonicParsing="false" onAction="#changerfenetre6" text="Consulter nos activités" />
+                  <MenuItem fx:id="ajouterActivities" mnemonicParsing="false" onAction="#changerfenetre7" text="Ajouter une activités" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Où pratiquer du sport">
+               <items>
+                  <MenuItem fx:id="stadiumsMap" mnemonicParsing="false" onAction="#changerfenetre8" text="Trouver un terrain" />
+               </items></Menu>
+         </menus>
+      </MenuBar>
+      <HBox prefHeight="330.0" prefWidth="650.0">
+         <children>
+            <AnchorPane fx:id="information" prefHeight="330.0" prefWidth="310.0">
+               <children>
+                  <Label fx:id="nomComplet" layoutX="21.0" layoutY="63.0" prefHeight="18.0" prefWidth="211.0" text="Julien D'alembert">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="titre" layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="165.0" text="Info Personnels : " textFill="#1a4101">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dateNaissance" layoutX="21.0" layoutY="93.0" prefHeight="18.0" prefWidth="211.0" text="né 18 Mars 1998">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="sexe" layoutX="21.0" layoutY="124.0" prefHeight="18.0" prefWidth="211.0" text="je suis un homme">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ville" layoutX="21.0" layoutY="154.0" prefHeight="18.0" prefWidth="211.0" text="j'habite à Trois-Rivières , QC">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="sport1" layoutX="21.0" layoutY="187.0" prefHeight="18.0" prefWidth="211.0" text="Mon sport préféré est le Hockey">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="sport2" layoutX="21.0" layoutY="217.0" prefHeight="18.0" prefWidth="211.0" text="sinon j'aime aussi le Soccer">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="sport3" layoutX="21.0" layoutY="246.0" prefHeight="18.0" prefWidth="211.0" text="et le Ski ">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <VBox fx:id="changeSpace" alignment="TOP_CENTER" prefHeight="330.0" prefWidth="169.0" spacing="5.0">
+               <children>
+                  <Button fx:id="editNomComplet" mnemonicParsing="false" onAction="#modifierNomComplet" text="Modifier" />
+                  <Button fx:id="editDateNaissance" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#modifierDateNaissance" text="Modifier" />
+                  <Button fx:id="editSexe" layoutX="10.0" layoutY="35.0" mnemonicParsing="false" onAction="#modifierSexe" text="Modifier" />
+                  <Button fx:id="editVille" layoutX="10.0" layoutY="61.0" mnemonicParsing="false" onAction="#modifierVille" text="Modifier" />
+                  <Button fx:id="editSport1" layoutX="10.0" layoutY="86.0" mnemonicParsing="false" onAction="#modifierSport1" text="Modifier" />
+                  <Button fx:id="editSport2" layoutX="10.0" layoutY="111.0" mnemonicParsing="false" onAction="#modifierSport2" text="Modifier" />
+                  <Button fx:id="editSport3" layoutX="10.0" layoutY="137.0" mnemonicParsing="false" onAction="#modifierSport3" text="Modifier" />
+               </children>
+               <padding>
+                  <Insets top="60.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="matchsList" alignment="CENTER" prefHeight="330.0" prefWidth="367.0" spacing="20.0">
+               <children>
+                  <Label text="Rencontres à venir : " textFill="#6b5303">
+                     <font>
+                        <Font name="Cambria Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="rencontreList" prefHeight="200.0" prefWidth="335.0" />
+                  <Button mnemonicParsing="false" onAction="#changerfenetre4" text="Consulter le détail" />
+               </children></VBox>
+         </children>
+      </HBox>
+      <AnchorPane fx:id="footer" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="75.0">
+         <children>
+            <Label fx:id="appLabel" layoutX="117.0" layoutY="12.0" prefHeight="57.0" prefWidth="439.0" text="Avec PlayTogether Vivez des expériences uniques et enrichissantes avec nos activités! Découvrez, apprenez et amusez-vous dans un cadre convivial et stimulant. Rejoignez-nous dès aujourd’hui" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Cambria" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

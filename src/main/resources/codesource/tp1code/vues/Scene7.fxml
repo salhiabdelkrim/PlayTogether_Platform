@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="myStage" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="703.0" prefWidth="962.0" styleClass="font" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="codesource.tp1code.controllers.AboutActivitiesController">
+   <children>
+      <AnchorPane fx:id="header" prefHeight="80.0" prefWidth="650.0">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="88.0" layoutX="29.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pics/logoSansFond.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="235.0" layoutY="26.0" prefHeight="30.0" text="Nos Activités  :" textFill="WHITE">
+               <font>
+                  <Font name="Cambria Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="834.0" layoutY="42.0" mnemonicParsing="false" onAction="#changerfenetre1" prefHeight="28.0" prefWidth="114.0" styleClass="deleteButton" text="Se déconnecter" />
+            <ComboBox fx:id="taille" layoutX="828.0" layoutY="8.0" prefHeight="25.0" prefWidth="127.0" promptText="Taille de police" />
+         </children>
+      </AnchorPane>
+      <MenuBar fx:id="menuApp">
+         <menus>
+            <Menu mnemonicParsing="false" text="Profil">
+               <items>
+                  <MenuItem fx:id="profil" mnemonicParsing="false" onAction="#changerfenetre2" text="Modifier votre profil" />
+                  <MenuItem fx:id="signInSignUp" mnemonicParsing="false" onAction="#changerfenetre1" text="Créer un nouveau compte" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Gestion des rencontres">
+               <items>
+                  <MenuItem fx:id="createMatch" mnemonicParsing="false" onAction="#changerfenetre3" text="créer une rencontre" />
+                  <MenuItem fx:id="joinMatch" mnemonicParsing="false" onAction="#changerfenetre4" text="rejoindre une rencontre" />
+                  <MenuItem fx:id="matchEditing" mnemonicParsing="false" onAction="#changerfenetre5" text="Supprimer ou modifier une rencontre " />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Nos activités">
+               <items>
+                  <MenuItem fx:id="aboutActivities" mnemonicParsing="false" onAction="#changerfenetre6" text="Consulter nos activités" />
+                  <MenuItem fx:id="ajouterActivities" mnemonicParsing="false" onAction="#changerfenetre7" text="Ajouter une activités" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Où pratiquer du sport">
+               <items>
+                  <MenuItem fx:id="stadiumsMap" mnemonicParsing="false" onAction="#changerfenetre8" text="Trouver un terrain" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <ScrollPane fx:id="activitiesContent" prefHeight="524.0" prefWidth="962.0" styleClass="contenu" stylesheets="@../style.css">
+         <content>
+            <GridPane fx:id="myGrid" hgap="5.0" prefHeight="750.0" prefWidth="950.0" stylesheets="@../style.css" vgap="5.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="123.0" prefWidth="243.0" styleClass="cadreContenu" stylesheets="@../style.css">
+                     <children>
+                        <Label styleClass="nomSport" stylesheets="@../style.css" text="Football" />
+                        <ImageView fitHeight="71.0" fitWidth="156.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pics/soccer.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="135.0" prefWidth="243.0" styleClass="contenu" stylesheets="@../style.css" text="Le football est un sport collectif opposant deux équipes de 11 joueurs. L'objectif est de marquer des buts en envoyant le ballon dans le but adverse, principalement avec les pieds. Il se joue sur un terrain gazonné et suit des règles strictes encadrées par un arbitre." textAlignment="CENTER" wrapText="true" />
+                        <Button mnemonicParsing="false" onAction="#changerfenetre3" styleClass="positiveButton" text="Créer une rencontre" textFill="WHITE" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="123.0" prefWidth="243.0" styleClass="cadreContenu" stylesheets="@../style.css" GridPane.columnIndex="2">
+                     <children>
+                        <Label styleClass="nomSport" stylesheets="@../style.css" text="Footing" />
+                        <ImageView fitHeight="71.0" fitWidth="156.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pics/footing.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="135.0" prefWidth="243.0" styleClass="contenu" stylesheets="@../style.css" text="Le footing est une course à pied pratiquée à allure modérée pour le loisir ou l’entraînement physique. Il améliore l’endurance et la condition physique. Courir régulièrement permet de renforcer les muscles, le cœur et de réduire le stress. Il se pratique seul ou en groupe." textAlignment="CENTER" wrapText="true" />
+                        <Button mnemonicParsing="false" onAction="#changerfenetre3" styleClass="positiveButton" text="Créer une rencontre" textFill="WHITE" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" layoutX="255.0" layoutY="10.0" prefHeight="123.0" prefWidth="243.0" styleClass="cadreContenu" stylesheets="@../style.css" GridPane.columnIndex="1">
+                     <children>
+                        <Label styleClass="nomSport" stylesheets="@../style.css" text="Baseball" />
+                        <ImageView fitHeight="71.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pics/baseball.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="135.0" prefWidth="240.0" styleClass="contenu" stylesheets="@../style.css" text="Le baseball est un sport collectif où deux équipes s’affrontent en alternant attaque et défense. Le lanceur envoie la balle au batteur qui tente de la frapper et courir les bases. L’équipe défensive tente d’éliminer les coureurs avant qu’ils marquent des points." textAlignment="CENTER" wrapText="true" />
+                        <Button mnemonicParsing="false" onAction="#changerfenetre3" styleClass="positiveButton" text="Créer une rencontre" textFill="WHITE" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="123.0" prefWidth="243.0" styleClass="cadreContenu" stylesheets="@../style.css" GridPane.rowIndex="1">
+                     <children>
+                        <Label styleClass="nomSport" stylesheets="@../style.css" text="Hockey" />
+                        <ImageView fitHeight="71.0" fitWidth="156.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pics/hockey.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="135.0" prefWidth="243.0" styleClass="contenu" stylesheets="@../style.css" text="Le hockey est un sport rapide joué sur glace ou sur gazon. Deux équipes s'affrontent pour marquer des buts en frappant un palet (sur glace) ou une balle (sur gazon) avec une crosse. Il exige vitesse, agilité et coordination entre les joueurs pour gagner." textAlignment="CENTER" wrapText="true" />
+                        <Button mnemonicParsing="false" onAction="#changerfenetre3" styleClass="positiveButton" text="Créer une rencontre" textFill="WHITE" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" layoutX="255.0" layoutY="10.0" prefHeight="123.0" prefWidth="243.0" styleClass="cadreContenu" stylesheets="@../style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label styleClass="nomSport" stylesheets="@../style.css" text="Kayak" />
+                        <ImageView fitHeight="71.0" fitWidth="156.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pics/kayak.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="135.0" prefWidth="243.0" styleClass="contenu" stylesheets="@../style.css" text="Le kayak est un sport nautique où l’on pagaie en position assise dans une embarcation étroite. Il se pratique sur rivières, lacs ou en mer, en loisir ou en compétition. Les disciplines incluent le slalom, la descente et la course en eau vive." textAlignment="CENTER" wrapText="true" />
+                        <Button mnemonicParsing="false" onAction="#changerfenetre3" styleClass="positiveButton" text="Créer une rencontre" textFill="WHITE" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" layoutX="501.0" layoutY="10.0" prefHeight="123.0" prefWidth="243.0" styleClass="cadreContenu" stylesheets="@../style.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <Label styleClass="nomSport" stylesheets="@../style.css" text="Tennis" />
+                        <ImageView fitHeight="71.0" fitWidth="156.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pics/tennis.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="135.0" prefWidth="243.0" styleClass="contenu" stylesheets="@../style.css" text="Le tennis est un sport de raquette opposant deux ou quatre joueurs. Ils frappent une balle au-dessus d’un filet pour marquer des points en la renvoyant dans le camp adverse. Il se pratique sur gazon, terre battue ou surface dure, en simple ou en double." textAlignment="CENTER" wrapText="true" />
+                        <Button mnemonicParsing="false" onAction="#changerfenetre3" styleClass="positiveButton" text="Créer une rencontre" textFill="WHITE" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <StackPane fx:id="footer" prefHeight="75.0" prefWidth="702.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Avec PlayTogether Vivez des expériences uniques et enrichissantes avec nos activités! Découvrez, apprenez et amusez-vous dans un cadre convivial et stimulant. Rejoignez-nous dès aujourd’hui" textAlignment="CENTER" textFill="WHITE" wrapText="true" StackPane.alignment="CENTER">
+               <font>
+                  <Font name="Cambria Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+   </children>
+</VBox>

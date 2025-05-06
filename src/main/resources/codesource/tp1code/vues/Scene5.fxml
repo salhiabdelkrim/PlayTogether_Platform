@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="myStage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="795.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="codesource.tp1code.controllers.JoinController">
+   <children>
+      <AnchorPane fx:id="header" prefHeight="80.0" prefWidth="650.0">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="88.0" layoutX="29.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pics/logoSansFond.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="205.0" layoutY="25.0" prefHeight="30.0" prefWidth="274.0" text="Rejoindre une activité :" textFill="WHITE">
+               <font>
+                  <Font name="Cambria Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="654.0" layoutY="40.0" mnemonicParsing="false" onAction="#changerfenetre1" prefHeight="30.0" prefWidth="116.0" styleClass="deleteButton" text="Se déconnecter" />
+            <ComboBox fx:id="taille" layoutX="643.0" layoutY="8.0" prefHeight="25.0" prefWidth="127.0" promptText="Taille de police" />
+         </children>
+      </AnchorPane>
+      <MenuBar fx:id="menuApp">
+         <menus>
+            <Menu mnemonicParsing="false" text="Profil">
+               <items>
+                  <MenuItem fx:id="profil" mnemonicParsing="false" onAction="#changerfenetre2" text="Modifier votre profil" />
+                  <MenuItem fx:id="signInSignUp" mnemonicParsing="false" onAction="#changerfenetre1" text="Créer un nouveau compte" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Gestion des rencontres">
+               <items>
+                  <MenuItem fx:id="createMatch" mnemonicParsing="false" onAction="#changerfenetre3" text="créer une rencontre" />
+                  <MenuItem fx:id="joinMatch" mnemonicParsing="false" onAction="#changerfenetre4" text="rejoindre une rencontre" />
+                  <MenuItem fx:id="matchEditing" mnemonicParsing="false" onAction="#changerfenetre5" text="Supprimer ou modifier une rencontre " />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Nos activités">
+               <items>
+                  <MenuItem fx:id="aboutActivities" mnemonicParsing="false" onAction="#changerfenetre6" text="Consulter nos activités" />
+                  <MenuItem fx:id="ajouterActivities" mnemonicParsing="false" onAction="#changerfenetre7" text="Ajouter une activités" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Où pratiquer du sport">
+               <items>
+                  <MenuItem fx:id="stadiumsMap" mnemonicParsing="false" onAction="#changerfenetre8" text="Trouver un terrain" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="650.0" spacing="10.0" styleClass="barreFiltres">
+         <children>
+            <Label text="Filtré par : " textFill="WHITE">
+               <font>
+                  <Font name="Cambria Bold" size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="filtres" prefWidth="150.0" />
+            <DatePicker fx:id="filtreDate" />
+            <Button mnemonicParsing="false" onAction="#filtrerRencontres" styleClass="positiveButton" text="Rechercher" textFill="WHITE">
+               <font>
+                  <Font name="Cambria Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <ScrollPane fx:id="joinContent" prefHeight="379.0" prefWidth="702.0" styleClass="vbox" stylesheets="@../style.css">
+         <content>
+            <GridPane fx:id="matchGrid" hgap="5.0" prefHeight="519.0" prefWidth="765.0" styleClass="vbox" stylesheets="@../style.css" vgap="10.0">
+              <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+
+              </columnConstraints>
+              <rowConstraints>
+
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <StackPane fx:id="footer" prefHeight="75.0" prefWidth="702.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Avec PlayTogether Vivez des expériences uniques et enrichissantes avec nos activités! Découvrez, apprenez et amusez-vous dans un cadre convivial et stimulant. Rejoignez-nous dès aujourd’hui" textAlignment="CENTER" textFill="WHITE" wrapText="true" StackPane.alignment="CENTER">
+               <font>
+                  <Font name="Cambria Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+   </children>
+</VBox>

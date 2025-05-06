@@ -1,0 +1,115 @@
+/*les couleurs et la gestion des images de fond */
+#contentStage{
+    -fx-background-image: url("pics/Backgroud.png");
+    -fx-background-size: cover; /* Ajuste la taille à la fenêtre */
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+#header{
+    -fx-background-color: rgb(33,44,12);
+}
+#footer{
+    -fx-background-color: #875702;
+}
+#origin {
+    -fx-background-color: #875702;
+}
+#paneLeft , #paneRight{
+    -fx-background-color: rgba(0,0,0,0.6);
+
+}
+
+/*page de création de match*/
+#mySplitPane{
+    -fx-background-image: url("pics/BG_createMatch.png");
+    -fx-background-size: cover; /* Ajuste la taille à la fenêtre */
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+
+}
+#leftPart , #middlePart {
+    -fx-background-color: rgba(0,0,0,0.6);
+    -fx-max-width: Infinity;
+}
+
+/*page de profil*/
+
+#changeSpace , #information{
+    -fx-background-color: rgba(251, 229, 206, 0.6);
+}
+#matchsList {
+    -fx-background-color: rgba(199, 246, 183, 0.6);
+}
+
+/*page d'ajout d'activité */
+#contentAddSport{
+    -fx-background-image: url("pics/footing.jpg");
+    -fx-background-size: cover; /* Ajuste la taille à la fenêtre */
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+#left , #right{
+    -fx-background-color: rgba(218, 207, 197, 0.6);
+}
+
+
+/* page pour rejoindre une activité */
+#joinContent {
+    -fx-background-image: url("pics/joinBackground.jpeg");
+    -fx-background-size: cover; /* Ajuste la taille à la fenêtre */
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+.vbox {
+    -fx-background: rgba(0,0,0,0.6);
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+
+}
+.barreFiltres{
+    -fx-background-color: #875702;
+}
+/*page Modification ou suppression de match */
+
+#matchEditingList{
+ -fx-background-color: rgb(50, 74, 1);
+}
+.positiveButton{
+    -fx-background-color: #154c02;
+    -fx-border-color: white;  /* Couleur du contour */
+    -fx-border-width: 2px;    /* Épaisseur du contour */
+    -fx-border-radius: 5px;   /* Coins arrondis */
+    -fx-padding: 5px;
+}
+.deleteButton{
+    -fx-background-color: #d89080;
+}
+.font{
+    -fx-font-family: Cambria;
+}
+
+/*page des informations sur les sports */
+.contenu{
+    -fx-background-color: rgba(34, 22, 11, 1);
+    -fx-text-fill: white;
+    -fx-border-radius: 10px;
+}
+.cadreContenu{
+    -fx-background-color: rgba(34, 22, 11, 0.4);
+}
+.nomSport{
+    -fx-background-color: rgb(132, 63, 0);
+    -fx-text-fill: white;
+}
+#myGrid{
+    -fx-background-image: url("pics/Backgroud.png");
+    -fx-background-size: cover; /* Ajuste la taille à la fenêtre */
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+#activitiesContent{
+    -fx-background-color: transparent;
+}
